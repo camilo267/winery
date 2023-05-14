@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Culinary King | About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- ----------------------------------------NAVBAR----------------------------------------------------->
+    <nav class="nav nav_top">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" width="250"></a>
+        </div>
+        <div class="nav_side">
+            <a href="about.html">ABOUT US</a>
+            <a href="summer.html">SUMMER SALE</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+    <!-- -------------------------------------------ABOUT US--------------------------------------------------------->
+    <div class="about_us" style="padding-top:100px;">
+        <h2>WHO WE ARE</h2>
+        <div class="about_content">
+            <h5>The best drinks in the town</h5>
+            <p>Welcome to Grapes Winery! We are a family-owned winery that has been producing high-quality wines for over 50 years. 
+                Our winery is located in the beautiful rolling hills of wine country, where the climate and soil are perfect for growing premium grapes. Our commitment to quality is evident in every bottle we produce, from our crisp and refreshing white wines to our bold and complex reds. We invite you to visit our winery and taste the difference for yourself. Come explore our vineyards, relax on our patio, and experience the beauty and bounty of wine country. Thank you for choosing Grapes Winery.</p>
+        </div>
+        <hr>
+        <h2>OUR LOVE FOR WINES DRIVES US TO BE EXPERTS.</h2>
+        <p>At Grapes Winery, we are passionate about wines. Our love for wines is what drives us to create some of the finest red and white wines that you will ever taste. From the careful selection of the grapes to the meticulous process of fermentation and aging, we put our hearts and souls into every bottle of wine that we produce.
+
+            We believe that wine is not just a drink, but an experience. It is an opportunity to bring people together, to share stories and create memories. That's why we strive to create wines that not only taste great but also offer a unique experience to our customers.
+            
+            Whether you are a seasoned wine connoisseur or just starting to discover the world of wines, we have something for everyone. From our full-bodied reds to our crisp and refreshing whites, our wines are sure to impress even the most discerning palates.
+            
+            So, if you share our love for wines, we invite you to come and experience the magic of Grapes Winery.</p>
+    </div>
+    <!-- --------------------------------------------FEED--------------------------------------------------------->
+    <div class="feed">
+        <h2>WRITE A REVIEW</h2>
+        <div class="feed_form" method="post">
+        <form name="submit-googlesheet">
+            <input type="text" name="Name" placeholder="Name"><br>
+            <input type="email" name="Email" placeholder="Email ID"><br>
+            <input type="text" name="Number" placeholder="Contact Number"><br>
+            <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+    </div>
+    <!-- --------------------------------------------FOOTER-------------------------------------------------------->
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="images/logo.png" width="250"></a>
+        </div>
+        <div class="pages">  
+            <h3>Customer Care</h3>
+            <a href="about.html">About Us</a>|
+            <a href="summer.html">Summer Sale</a>|
+\            <a href="contact.html">Contact</a>
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="#">Privacy Policy</a>|
+            <a href="#">Terms of Use</a>|
+            <a href="#">Refund Policy</a>
+        </div>
+        <div class="social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="https://api.WhatsApp.com/send?phone=+910000000000" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="tel: +910000000000"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            <a href="mailto: roshnideyic365@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+        </div>
+        <hr>
+        <p>Copyright &copy; 2021 Culinary King. All rights reserved.</p>
+    </footer>
+
+<script type="text/javascript">
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzmY7HJmUEupsd8UBLj-aTxEsPcKQEWFYaxFA44IcIYrYCjanY1WcTF4zyKYXFQubtbTA/exec'
+            const form = document.forms['submit-googlesheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks you for your valuable feedback!"))
+                .catch(error => console.error('Error!', error.message))
+            })
+          
+</script>
+</body>
+</html>
